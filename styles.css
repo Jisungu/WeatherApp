@@ -3,15 +3,18 @@ html {
 }
 
 #weatherblock {
+    height: 70%;
     background: linear-gradient(340deg, rgba(2,0,36,1) 0%, rgba(12,36,97,1) 25%, rgba(130,204,221,1) 100%);
-    width: 375px;
-    height: 540px;
+    max-width: 375px;
+    max-height: 540px;
+    width: 92%;
     border-radius: 25px;
     box-shadow: 9px 5px 17px 5px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: Helvetica;
 }
 
 #search {
@@ -38,4 +41,28 @@ html {
     font-size: 15px;
     cursor: pointer;
     background: #ffffffe0;
+}
+
+#resultBlock {
+    color: white;
+}
+
+#temperatureBlock {
+    text-align: center;
+}
+
+#tempIcon img {
+    width: 160px;
+}
+
+#tempCelsius {
+    font-size: 50px;
+    margin-bottom: 12px;
+    margin-top: -10px;
+    font-weight: 700;
+}
+
+#locationName {
+    font-size: 21px;
+    font-weight: 700;
 }

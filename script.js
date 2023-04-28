@@ -16,6 +16,10 @@ function callApi(location){
     $.ajax({
         url: "https://api.weatherapi.com/v1/current.json?key=862defbfa1764dd4b10220355232704&q="+string_norm+"&aqi=yes"
     }).done(function (data) {
-        console.log(data);
+        let currentData = data.current;
+        let locationData = data.location;
+        $('#tempIcon').html('<img src="'+ currentData.condition.icon +'" alt="tempIcon">');
+        $('#tempCelsius').text(currentData.temp_c+'°');
+        $('#locationName').text(locationData.name + ', ' + locationData.country);
     });
 }
